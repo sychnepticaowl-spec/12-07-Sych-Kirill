@@ -261,35 +261,5 @@ def stores_db(city: str) -> str:
 
 ## 📚 Источники
 
-- [Домашнее задание 12-07](https://github.com/netology-code/sdb-homeworks/blob/main/12-07.md)
 - [PostgreSQL — High Availability](https://www.postgresql.org/docs/current/high-availability.html)
-- [Репликация, шардинг — Habr](https://habr.com/ru/articles/875708/)
 
----
-
-## 🚀 Push на GitHub
-
-```bash
-cd ~/12-07-Sych-Kirill
-
-git init
-git branch -m main
-git config user.name "Kirill Sych"
-git config user.email "sych.ne.ptica.owl@gmail.com"
-
-mkdir -p .git/hooks
-cat > .git/hooks/prepare-commit-msg << 'EOF'
-#!/bin/bash
-sed -i '/cursoragent@cursor\.com/d' "$1"
-sed -i '/Co-authored-by: Cursor/d' "$1"
-EOF
-chmod +x .git/hooks/prepare-commit-msg
-
-git add .
-git commit --no-verify -m "Add replication and sharding homework 12.07."
-git remote add origin git@github.com:sychnepticaowl-spec/12-07-Sych-Kirill.git
-git push -u origin main
-```
-
-**Сдача в Netology:**  
-https://github.com/sychnepticaowl-spec/12-07-Sych-Kirill/blob/main/README.md
